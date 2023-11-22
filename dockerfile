@@ -1,8 +1,7 @@
-# 使用官方的 Nginx 镜像作为基础镜像
 FROM nginx:latest
-
-# 将本地的 Nginx 配置文件复制到镜像中
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# 暴露 Nginx 的默认 HTTP 端口
+WORKDIR /app
+RUN [ "npm","i" ]
+RUN ["npm","run","build"]
+COPY build/ /usr/share/nginx/html
 EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
