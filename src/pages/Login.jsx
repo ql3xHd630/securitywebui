@@ -1,5 +1,4 @@
 import request from '../util/request'
-import Axios from 'axios'
 function Login() {
     const login = () => {
         let payload = {
@@ -7,7 +6,7 @@ function Login() {
             password: '123456'
         }
         request.get('User').then((res) => {
-            console.log(res.data)
+            console.log(res.data, payload)
         })
 
     }

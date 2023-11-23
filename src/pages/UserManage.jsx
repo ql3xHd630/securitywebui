@@ -1,5 +1,5 @@
 import React from 'react';
-import { Space, Table, Tag } from 'antd';
+import { Table } from 'antd';
 import { useEffect, useState } from 'react'
 import request from '../util/request';
 
