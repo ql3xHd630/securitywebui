@@ -1,5 +1,5 @@
 import axios from "axios"
-const baseUrl = 'https://localhost:5000/api/'
+const baseUrl = 'http://104.214.137.120:5000/api/'
 class request {
     static get(path) {
         return axios.get(baseUrl + path)
