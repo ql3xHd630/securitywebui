@@ -12,7 +12,6 @@ function UserManage() {
             setIsLoading(false)
         })
     }, [])
-    console.log(users)
     const columns = [
         {
             title: 'Name',

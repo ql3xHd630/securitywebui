@@ -6,7 +6,7 @@ function Login() {
             password: '123456'
         }
         request.get('User').then((res) => {
-            console.log(res.data, payload)
+
         })
 
     }

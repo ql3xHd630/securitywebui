@@ -1,5 +1,9 @@
 import axios from "axios"
-const baseUrl = localStorage.getItem('config').baseUrl + '/api/'
+const config = localStorage.getItem('config')
+console.log(config)
+const configObject = JSON.parse(config)
+const baseUrl = configObject.baseUrl + '/api/'
+
 class request {
     static get(path) {
         return axios.get(baseUrl + path)
