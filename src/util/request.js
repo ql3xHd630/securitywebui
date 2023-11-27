@@ -1,5 +1,5 @@
 import axios from "axios"
-const baseUrl = 'http://104.214.137.120:5000/api/'
+const baseUrl = localStorage.getItem('config').baseUrl + '/api/'
 class request {
     static get(path) {
         return axios.get(baseUrl + path)
@@ -14,6 +14,5 @@ class request {
         })
         return result
     }
-
 }
 export default request
