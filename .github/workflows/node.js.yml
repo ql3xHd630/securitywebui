@@ -28,6 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm i
     - run: npm run build 
+    - run: cat ./build/config.json
     - run: docker build -t scuritywebui:githubbuildtest .
     - run: docker tag scuritywebui:githubbuildtest vitotestacr.azurecr.io/securitywebui:githubbuildtest
     - run: docker login -u VitoTestACR -p fStyLe2hbzmMZrXj7heB3q0iCUDmLiaY1j9WAPceFC+ACRBtvjci vitotestacr.azurecr.io
